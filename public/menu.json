@@ -1,0 +1,56 @@
+{
+  "lanches": [
+    {
+      "id": 1,
+      "name": "Noah's Burguer",
+      "description": "Pão, carne 150g e queijo cheddar",
+      "price": 20.0,
+      "image": "/lanches/x-burguer.webp"
+    },
+    {
+      "id": 2,
+      "name": "Noah's Salada",
+      "description": "Pão, carne 150g, queijo cheddar, alface e tomate",
+      "price": 25.0,
+      "image": "/lanches/x-salada.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Noah's Bacon",
+      "description": "Pão, carne 150g, queijo cheddar, alface, tomate e bacon em tiras",
+      "price": 30.0,
+      "image": "/lanches/x-bacon.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Noah's calabresa",
+      "description": "Pão, carne 150g, queijo cheddar, alface, tomate e calabresa",
+      "price": 30.0,
+      "image": "/lanches/X-calabresa.png"
+    }
+  ],
+
+  "bebidas": [
+    {
+      "id": 1,
+      "name": "Coca-Cola",
+      "description": "Refrigerante lata",
+      "price": 6.0,
+      "image": "/bebidas/coca-lata.webp"
+    },
+    {
+      "id": 2,
+      "name": "Cerveja Spaten",
+      "description": "Puro malte",
+      "price": 9.0,
+      "image": "/bebidas/cerveja-spaten.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Cerveja Quinta do Malte",
+      "description": "IPA Mamba",
+      "price": 18.0,
+      "image": "/bebidas/quinta-do-malte-ipa.png"
+    }
+  ]
+}
