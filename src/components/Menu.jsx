@@ -1,8 +1,8 @@
 import { ShoppingCart } from "lucide-react";
 
-const Menu = ({ data }) => {
+const Menu = ({ data,  }) => {
   return (
-    <div className="h-full w-full bg-zinc-50 px-[2rem]">
+    <div className="h-full w-full bg-zinc-50 px-[2rem] mb-8 relative">
       <h1 className="text-center text-[26px] font-bold py-5">Lanches</h1>
       <div className="grid gap-4">
         {data &&
