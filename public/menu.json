@@ -32,21 +32,21 @@
 
   "bebidas": [
     {
-      "id": 1,
+      "id": 5,
       "name": "Coca-Cola",
       "description": "Refrigerante lata",
       "price": 6.0,
       "image": "/bebidas/coca-lata.webp"
     },
     {
-      "id": 2,
+      "id": 6,
       "name": "Cerveja Spaten",
       "description": "Puro malte",
       "price": 9.0,
       "image": "/bebidas/cerveja-spaten.jpg"
     },
     {
-      "id": 3,
+      "id": 7,
       "name": "Cerveja Quinta do Malte",
       "description": "IPA Mamba",
       "price": 18.0,

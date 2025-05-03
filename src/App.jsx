@@ -25,6 +25,7 @@ export default function App() {
     }
   };
 
+
   useEffect(() => {
     fetch("/menu.json")
       .then((response) => response.json())
@@ -36,11 +37,11 @@ export default function App() {
   return (
     <div>
       <Header />
-      <Menu data={data} />
+      <Menu data={data} addToCart={addToCart}/>
       <div className={`display ${flowCart ? "block" : "hidden"}`}>
-        <Cart addToCart={addToCart} />
+        <Cart cartItems={cartItems} setFlowCart={setFlowCart} />
       </div>
-      <Footer setFlowCart={setFlowCart} />
+      <Footer setFlowCart={setFlowCart} cartItems={cartItems} />
     </div>
   );
 }
