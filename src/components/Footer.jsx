@@ -12,4 +12,3 @@ const Footer = ({setFlowCart, cartItems}) => {
 
 export default Footer;
 
-// () => setFlowCart(true)

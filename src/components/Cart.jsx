@@ -1,7 +1,13 @@
 import { CirclePlus, CircleMinus } from "lucide-react";
+import { useEffect } from "react";
 
+const Cart = ({ cartItems, setFlowCart, increaseItems, decreaseItems }) => {
+  useEffect(() => {
+    if (cartItems.length === 0) {
+      setFlowCart(false);
+    }
+  }, [cartItems, setFlowCart]);
 
-const Cart = ({ cartItems, setFlowCart }) => {
   return (
     <div className="flex h-screen w-full bg-black/60 fixed z-50 top-0 right-0">
       <div className="h-[300px] w-[330px] bg-white opacity-100 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-3 py-1 flex flex-col">
@@ -19,19 +25,30 @@ const Cart = ({ cartItems, setFlowCart }) => {
                 <img className="h-[50px] w-[60px]" src={item.image} alt="" />
                 <div>
                   <p>{item.name}</p>
-                  <p>{(item.price * item.quantity).toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  })}
+                  <div className="flex gap-5 items-center ">
+                    <p className="text-[14px] font-bold">
+                      {item.price.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      })}
+                    </p>
+                    {item.quantity > 1 && (
+                      <p className="text-zinc-500 italic text-[16px]">
+                        {(item.price * item.quantity).toLocaleString("pt-BR", {
+                          style: "currency",
+                          currency: "BRL",
+                        })}
                       </p>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 rounded-xl px-1 py-1">
-                <button>
+                <button onClick={() => decreaseItems(item.id)}>
                   <CircleMinus />
                 </button>
                 <span>{item.quantity}</span>
-                <button>
+                <button onClick={() => increaseItems(item.id)}>
                   <CirclePlus />
                 </button>
               </div>

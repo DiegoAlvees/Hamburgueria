@@ -25,6 +25,25 @@ export default function App() {
     }
   };
 
+  const increaseItems = (id) => {
+    setCartItems((prevItems) =>
+      prevItems.map((cartItem) =>
+        cartItem.id === id
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem
+      )
+    );
+  };
+
+  const decreaseItems = (id) => {
+    setCartItems((prevItems) =>
+      prevItems
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
 
   useEffect(() => {
     fetch("/menu.json")
@@ -37,9 +56,14 @@ export default function App() {
   return (
     <div>
       <Header />
-      <Menu data={data} addToCart={addToCart}/>
+      <Menu data={data} addToCart={addToCart} />
       <div className={`display ${flowCart ? "block" : "hidden"}`}>
-        <Cart cartItems={cartItems} setFlowCart={setFlowCart} />
+        <Cart
+          cartItems={cartItems}
+          setFlowCart={setFlowCart}
+          increaseItems={increaseItems}
+          decreaseItems={decreaseItems}
+        />
       </div>
       <Footer setFlowCart={setFlowCart} cartItems={cartItems} />
     </div>
