@@ -1,5 +1,7 @@
 import { CirclePlus, CircleMinus } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ClosePurchase from "./ClosePurchase";
+
 
 const Cart = ({ cartItems, setFlowCart, increaseItems, decreaseItems }) => {
   useEffect(() => {
@@ -8,9 +10,11 @@ const Cart = ({ cartItems, setFlowCart, increaseItems, decreaseItems }) => {
     }
   }, [cartItems, setFlowCart]);
 
+  const [openClosePurchase, setOpenClosePurchase] = useState(false);
+  
   return (
     <div className="flex h-screen w-full bg-black/60 fixed z-50 top-0 right-0">
-      <div className="h-[300px] w-[330px] bg-white opacity-100 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-3 py-1 flex flex-col">
+      <div className="h-[400px] w-[330px] bg-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-3 py-1 flex flex-col">
         <h1 className="text-center font-bold text-[18px] mb-2">
           Itens adicionados
         </h1>
@@ -63,11 +67,13 @@ const Cart = ({ cartItems, setFlowCart, increaseItems, decreaseItems }) => {
           >
             Adicionar mais itens
           </button>
-          <button className="bg-red-500 text-white rounded-lg px-2 py-1">
+          <button onClick={() => setOpenClosePurchase(true)} className="bg-red-500 text-white rounded-lg px-2 py-1">
             Encerrar Compra
           </button>
         </div>
       </div>
+          {openClosePurchase && <ClosePurchase cartItems={cartItems}/>}
+      
     </div>
   );
 };

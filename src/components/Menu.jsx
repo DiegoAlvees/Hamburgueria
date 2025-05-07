@@ -14,7 +14,7 @@ const Menu = ({ data, addToCart }) => {
               <img
                 className="w-[110px] h-[110px] rounded-lg"
                 src={item.image}
-                alt="foto do lanche"
+                alt="imagem do lanche"
               />
               <div className="flex flex-col">
                 <p className="text-lg font-bold">{item.name}</p>
@@ -26,7 +26,7 @@ const Menu = ({ data, addToCart }) => {
                       currency: "BRL",
                     })}
                   </p>
-                  <button onClick={() => addToCart(item)} className="text-slate-300 bg-black rounded-lg py-[2px] px-[2px]">
+                  <button onClick={() => addToCart(item)} className="text-slate-300 bg-black rounded-lg py-[2px] px-[2px] transition transform active:scale-95">
                     <ShoppingCart />
                   </button>
                 </div>
