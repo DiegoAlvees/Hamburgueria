@@ -14,7 +14,7 @@ const Cart = ({ cartItems, setFlowCart, increaseItems, decreaseItems }) => {
   
   return (
     <div className="flex h-screen w-full bg-black/60 fixed z-50 top-0 right-0">
-      <div className="h-[400px] w-[330px] bg-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-3 py-1 flex flex-col">
+      <div className="h-[25rem] w-[20.6rem] bg-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-3 py-1 flex flex-col">
         <h1 className="text-center font-bold text-[18px] mb-2">
           Itens adicionados
         </h1>
@@ -26,18 +26,18 @@ const Cart = ({ cartItems, setFlowCart, increaseItems, decreaseItems }) => {
               className="flex justify-between items-center gap-2 mb-2"
             >
               <div className="flex gap-2">
-                <img className="h-[50px] w-[60px]" src={item.image} alt="" />
+                <img className="h-[3.12rem] w-[3.75rem]" src={item.image} alt="" />
                 <div>
                   <p>{item.name}</p>
                   <div className="flex gap-5 items-center ">
-                    <p className="text-[14px] font-bold">
+                    <p className="text-[0.87rem] font-bold">
                       {item.price.toLocaleString("pt-BR", {
                         style: "currency",
                         currency: "BRL",
                       })}
                     </p>
                     {item.quantity > 1 && (
-                      <p className="text-zinc-500 italic text-[16px]">
+                      <p className="text-zinc-500 italic text-[1rem]">
                         {(item.price * item.quantity).toLocaleString("pt-BR", {
                           style: "currency",
                           currency: "BRL",
@@ -72,7 +72,7 @@ const Cart = ({ cartItems, setFlowCart, increaseItems, decreaseItems }) => {
           </button>
         </div>
       </div>
-          {openClosePurchase && <ClosePurchase cartItems={cartItems}/>}
+          {openClosePurchase && <ClosePurchase cartItems={cartItems} setOpenClosePurchase={setOpenClosePurchase}/>}
       
     </div>
   );

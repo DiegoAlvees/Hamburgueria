@@ -1,5 +1,5 @@
 
-const AdressForm = ({setAddress, address}) => {
+const AdressForm = ({setAddress, address, error}) => {
   
 
   const handleChange = (e) => {
@@ -11,7 +11,7 @@ const AdressForm = ({setAddress, address}) => {
 
   return (
     <div>
-      <h1 className="text-center font-bold text-[18px] my-2">
+      <h1 className="text-center font-bold text-[1.12rem] my-2">
         Endereço de Entrega
       </h1>
       <form className="flex flex-col gap-2">
@@ -22,7 +22,7 @@ const AdressForm = ({setAddress, address}) => {
           required
           type="text"
           placeholder="Rua"
-          className="border border-zinc-300 rounded-lg px-2 py-1"
+          className={`border ${error && !address.rua ? 'border-red-500' : 'border-zinc-300'} rounded-lg px-2 py-1`}
         />
         <input
           name="numero"
@@ -31,7 +31,7 @@ const AdressForm = ({setAddress, address}) => {
           required
           type="text"
           placeholder="Número"
-          className="border border-zinc-300 rounded-lg px-2 py-1"
+          className={`border ${error && !address.numero ? 'border-red-500' : 'border-zinc-300'} rounded-lg px-2 py-1`}
         />
         <input
           name="complemento"
@@ -39,8 +39,7 @@ const AdressForm = ({setAddress, address}) => {
           onChange={handleChange}
           type="text"
           placeholder="Complemento"
-          className="border border-zinc-300 rounded-lg px-2 py-1"
-        />
+          className="border border-zinc-300 rounded-lg px-2 py-1"        />
         <input
           name="bairro"
           value={address.bairro}
@@ -48,7 +47,7 @@ const AdressForm = ({setAddress, address}) => {
           required
           type="text"
           placeholder="Bairro"
-          className="border border-zinc-300 rounded-lg px-2 py-1"
+          className={`border ${error && !address.bairro ? 'border-red-500' : 'border-zinc-300'} rounded-lg px-2 py-1`}
         />
         <input
           name="cidade"
@@ -57,7 +56,7 @@ const AdressForm = ({setAddress, address}) => {
           required
           type="text"
           placeholder="Cidade"
-          className="border border-zinc-300 rounded-lg px-2 py-1"
+          className={`border ${error && !address.cidade ? 'border-red-500' : 'border-zinc-300'} rounded-lg px-2 py-1`}
         />
       </form>
     </div>

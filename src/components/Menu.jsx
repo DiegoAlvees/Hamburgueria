@@ -12,7 +12,7 @@ const Menu = ({ data, addToCart }) => {
               className="grid grid-cols-[4fr_6fr] items-center gap-4 pb-4"
             >
               <img
-                className="w-[110px] h-[110px] rounded-lg"
+                className="w-[6.9rem] h-[6.9rem] rounded-lg"
                 src={item.image}
                 alt="imagem do lanche"
               />
@@ -26,7 +26,7 @@ const Menu = ({ data, addToCart }) => {
                       currency: "BRL",
                     })}
                   </p>
-                  <button onClick={() => addToCart(item)} className="text-slate-300 bg-black rounded-lg py-[2px] px-[2px] transition transform active:scale-95">
+                  <button onClick={() => addToCart(item)} className="text-slate-300 bg-black rounded-lg py-[0.13rem] px-[0.13rem] transition transform active:scale-50">
                     <ShoppingCart />
                   </button>
                 </div>
@@ -34,7 +34,7 @@ const Menu = ({ data, addToCart }) => {
             </section>
           ))}
 
-<h1 className="text-center text-[26px] font-bold py-5">Bebidas</h1>
+<h1 className="text-center text-[1.63rem] font-bold py-5">Bebidas</h1>
 {data &&
           data.bebidas.map((item) => (
             <section
@@ -42,7 +42,7 @@ const Menu = ({ data, addToCart }) => {
               className="grid grid-cols-[4fr_6fr] items-center gap-4 pb-4"
             >
               <img
-                className="w-[110px] h-[120px] rounded-lg"
+                className="w-[6.9rem] h-[7.5rem] rounded-lg"
                 src={item.image}
                 alt="foto do lanche"
               />
@@ -56,7 +56,7 @@ const Menu = ({ data, addToCart }) => {
                       currency: "BRL",
                     })}
                   </p>
-                  <button onClick={() => addToCart(item)} className="text-slate-300 bg-black rounded-lg py-[2px] px-[2px]">
+                  <button onClick={() => addToCart(item)} className="text-slate-300 bg-black rounded-lg py-[0.13rem] px-[0.13rem] transition transform active:scale-50">
                     <ShoppingCart />
                   </button>
                 </div>
