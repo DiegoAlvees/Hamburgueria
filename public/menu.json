@@ -47,8 +47,8 @@
     },
     {
       "id": 7,
-      "name": "Cerveja Quinta do Malte",
-      "description": "IPA Mamba",
+      "name": "Quinta do Malte",
+      "description": "Cerveja IPA Mamba",
       "price": 18.0,
       "image": "/bebidas/quinta-do-malte-ipa.png"
     }

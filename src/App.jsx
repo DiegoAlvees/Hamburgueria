@@ -56,7 +56,7 @@ export default function App() {
   return (
     <div>
       <Header />
-      <Menu data={data} addToCart={addToCart} />
+      {data && <Menu data={data} addToCart={addToCart} />}
       <div className={`display ${flowCart ? "block" : "hidden"}`}>
         <Cart
           cartItems={cartItems}
