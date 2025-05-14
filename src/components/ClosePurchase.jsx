@@ -58,7 +58,7 @@ const ClosePurchase = ({ cartItems, setOpenClosePurchase }) => {
 
   return (
     <div className="flex h-screen w-full fixed z-50 top-0 right-0 bg-black/30">
-      <div className="h-[25rem] w-[20.6rem] bg-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-3 py-1 flex flex-col justify-between">
+      <div className="h-[25rem] w-[20.6rem] md:h-[25rem] md:w-[25rem] lg:h-[30rem] lg:w-[25rem] bg-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-3 py-1 flex flex-col justify-between">
         <div className="flex mb-2">
           <button onClick={() => setOpenClosePurchase(false)} className="text-red-500 transition transform active:scale-50">
             <ArrowLeftToLine />
