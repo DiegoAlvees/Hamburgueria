@@ -1,15 +1,15 @@
 import { ShoppingCart } from "lucide-react";
 
-const ItemList = ({title, items, addToCart }) => {
+const ItemList = ({title, items, addToCart, className }) => {
     return (
-        <>
-        <h1 className="text-center text-[1.63rem] lg:text-[2.5rem] font-bold py-5 lg:py-14">{title}</h1>
-      <div className="grid md:grid-cols-2 gap-4">
+        <div className={className}>
+        <h1 className="text-center text-[1.63rem] lg:text-[2.5rem] font-bold pt-10">{title}</h1>
+      <div className="grid md:grid-cols-2 gap-4 pt-8">
         {items &&
           items.map((item) => (
             <section
               key={item.id}
-              className="grid grid-cols-[4fr_6fr] sm:grid-cols-[4fr_12fr] md:grid-cols-[3fr_6fr] xl:grid-cols-[3fr_7fr] items-center gap-4 pb-16"
+              className="grid grid-cols-[4fr_6fr] sm:grid-cols-[4fr_12fr] md:grid-cols-[3fr_6fr] xl:grid-cols-[3fr_7fr] items-center gap-4 pb-10"
             >
               <img
                 className="w-[6.9rem] h-[6.9rem] lg:w-[8.5rem] lg:h-[8.5rem] xl:w-[10rem] xl:h-[10rem] rounded-lg"
@@ -37,7 +37,7 @@ const ItemList = ({title, items, addToCart }) => {
             </section>
           ))}
       </div>
-        </>
+        </div>
     )
 }
 

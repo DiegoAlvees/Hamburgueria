@@ -30,23 +30,54 @@
     }
   ],
 
-  "bebidas": [
+  "porcoes": [
     {
       "id": 5,
+      "name": "Contra Filé",
+      "description": "Iscar de contra filé acebolado, acompanha molho da casa",
+      "price": 65.0,
+      "image": "/porcoes/contra-file.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Fritas",
+      "description": "Porção de batata frita, acompanha molho da casa",
+      "price": 20.0,
+      "image": "/porcoes/batata-frita.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Frango a passarinho",
+      "description": "Frango a passarinho crocante, acompanha molho da casa",
+      "price": 20.0,
+      "image": "/porcoes/frango-a-passarinho.jpg"
+    }
+  ],
+
+  "bebidas": [
+    {
+      "id": 8,
       "name": "Coca-Cola",
       "description": "Refrigerante lata",
       "price": 6.0,
       "image": "/bebidas/coca-lata.webp"
     },
     {
-      "id": 6,
+      "id": 9,
+      "name": "Suco de laranja",
+      "description": "Suco de laranja natural, copo 400ml",
+      "price": 8.0,
+      "image": "/bebidas/suco-de-laranja.jpeg"
+    },
+    {
+      "id": 10,
       "name": "Cerveja Spaten",
-      "description": "Puro malte",
+      "description": "Cerveja Puro malte - Long neck 355ml",
       "price": 9.0,
       "image": "/bebidas/cerveja-spaten.jpg"
     },
     {
-      "id": 7,
+      "id": 11,
       "name": "Quinta do Malte",
       "description": "Cerveja IPA Mamba",
       "price": 18.0,
