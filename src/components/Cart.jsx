@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ClosePurchase from "./ClosePurchase";
 
 
+
 const Cart = ({ cartItems, setFlowCart, increaseItems, decreaseItems }) => {
   useEffect(() => {
     if (cartItems.length === 0) {

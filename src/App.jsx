@@ -4,6 +4,9 @@ import Menu from "./components/Menu";
 import { useEffect } from "react";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function App() {
   const [data, setData] = useState();
@@ -66,6 +69,7 @@ export default function App() {
         />
       </div>
       <Footer setFlowCart={setFlowCart} cartItems={cartItems} />
+      <ToastContainer autoClose={1000} position="top-right" />
     </div>
   );
 }

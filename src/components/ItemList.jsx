@@ -1,6 +1,12 @@
+import { toast } from "react-toastify";
 import { ShoppingCart } from "lucide-react";
 
 const ItemList = ({title, items, addToCart, className }) => {
+const handleAddToCart = (item) => {
+    addToCart(item);
+    toast.success("Item adicionado ao carrinho!");
+  };
+
     return (
         <div className={className}>
         <h1 className="text-center text-[1.63rem] lg:text-[2.5rem] font-bold pt-10">{title}</h1>
@@ -27,7 +33,7 @@ const ItemList = ({title, items, addToCart, className }) => {
                     })}
                   </p>
                   <button
-                    onClick={() => addToCart(item)}
+                    onClick={() => handleAddToCart(item)}
                     className="text-slate-300 bg-black rounded-lg py-[0.13rem] px-[0.13rem]  transition transform active:scale-50"
                   >
                     <ShoppingCart />
